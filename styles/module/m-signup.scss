@@ -1,5 +1,6 @@
 @charset "utf-8";
 .m-signup.play{
+    -webkit-transform:translateZ(0);
     .way{
         p:nth-of-type(1){
             -webkit-animation:animate-drop .5s ease-in forwards;

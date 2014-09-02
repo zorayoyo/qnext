@@ -5,6 +5,9 @@ body {
   margin: 0;
   font-size: .16rem; }
 
+html, body {
+  overflow: hidden; }
+
 html, body, article {
   height: 100%; }
 
@@ -494,18 +497,20 @@ article {
     line-height: 1.8;
     opacity: 0; }
 
-.m-signup.play .way p:nth-of-type(1) {
-  -webkit-animation: animate-drop .5s ease-in forwards; }
-.m-signup.play .way p:nth-of-type(2) {
-  -webkit-animation: animate-drop .5s .5s ease-in forwards; }
-.m-signup.play .way p:nth-of-type(3) {
-  -webkit-animation: animate-drop .5s 1s ease-in forwards; }
-.m-signup.play .ing p:nth-of-type(1) {
-  -webkit-animation: animate-drop .5s 1.5s ease-in forwards; }
-.m-signup.play .ing p:nth-of-type(2) {
-  -webkit-animation: animate-drop .5s 2s ease-in forwards; }
-.m-signup.play .ing p:nth-of-type(3) {
-  -webkit-animation: scale .5s 2.5s ease-in forwards; }
+.m-signup.play {
+  -webkit-transform: translateZ(0); }
+  .m-signup.play .way p:nth-of-type(1) {
+    -webkit-animation: animate-drop .5s ease-in forwards; }
+  .m-signup.play .way p:nth-of-type(2) {
+    -webkit-animation: animate-drop .5s .5s ease-in forwards; }
+  .m-signup.play .way p:nth-of-type(3) {
+    -webkit-animation: animate-drop .5s 1s ease-in forwards; }
+  .m-signup.play .ing p:nth-of-type(1) {
+    -webkit-animation: animate-drop .5s 1.5s ease-in forwards; }
+  .m-signup.play .ing p:nth-of-type(2) {
+    -webkit-animation: animate-drop .5s 2s ease-in forwards; }
+  .m-signup.play .ing p:nth-of-type(3) {
+    -webkit-animation: scale .5s 2.5s ease-in forwards; }
 
 .m-signup {
   background-color: #a46e51;
@@ -529,8 +534,10 @@ article {
   .m-signup .ing p:nth-of-type(3) {
     margin-top: 0; }
 
-.m-ending.play .m-ending-hd {
-  -webkit-animation: scale 1s ease forwards; }
+.m-ending.play {
+  -webkit-transform: translateZ(0); }
+  .m-ending.play .m-ending-hd {
+    -webkit-animation: scale 1s ease forwards; }
 
 .m-ending-hd {
   background-color: #fff;
