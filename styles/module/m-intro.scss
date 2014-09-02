@@ -1,0 +1,106 @@
+@charset "utf-8";
+.m-intro.play{
+    &:before{
+        -webkit-animation:cloud-layer 8s ease-in-out infinite alternate;
+    }
+    &:after{
+        -webkit-animation:mountain .7s ease-in-out forwards; 
+    }
+    .title{
+        -webkit-animation:intro-title 1s 1.8s ease-in forwards;
+    }
+    .para{
+        -webkit-animation:animate-opacity 1s 3s ease-in-out forwards;
+    }
+    .topic{
+        .html{
+            -webkit-animation:topic .7s .5s ease-in-out forwards;
+        }
+        .css{
+            -webkit-animation:topic .7s 1s ease-in-out forwards;
+        }
+        .js{
+            -webkit-animation:topic .7s 1.3s ease-in-out forwards;
+        }
+        .inter{
+            -webkit-animation:topic .7s 1.6s ease-in-out forwards;
+        }
+    }
+}
+.m-intro{
+    @extend %page;
+    background-color:#f7ebaa;
+    color:#806c03;
+    &:before,&:after{
+        content:"\0020";
+        position:absolute;
+        width:100%;
+    }
+    &:before{
+        top:0;
+        left:0;
+        background:url($img-src-cloud-opening) -.40rem -2.10rem no-repeat;
+        background-size:3.88rem 2.57rem;
+        height:.52rem;
+    }
+    // decoration-mountain
+    &:after{
+        bottom:-2.39rem;
+        right:0;
+        background:url($img-src-mountain) no-repeat;
+        background-size:3.04rem 2.94rem;
+        width:2.60rem;
+        height:2.39rem;
+    }
+    .title{
+        padding:.36rem 0;
+        font:.24rem Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+        opacity:0;
+    }
+    .para{
+        padding:0 .32rem; 
+        font-size:.15rem;
+        line-height:1.8;
+        opacity:0;
+    }
+    .topic{
+        div{
+            position:absolute;
+            z-index:1;
+            background-color:#f1eee5;
+            display:inline-block;
+            font-size:.15rem;
+            line-height:1.8;
+            padding:0 .12rem;
+            -webkit-transform:scale(0);
+            &:before{
+                position:absolute;
+                right:-.23rem;
+                bottom:.06rem;
+                content:"\0020";
+                width:0;
+                height:0;
+                border-style:solid;
+                border-width:.06rem .12rem;
+                border-color:transparent transparent #f1eee5 #f1eee5 ;
+            }
+        }
+        .html{
+            right:1.26rem;
+            bottom:1.22rem;
+        }
+        .css{
+            right:.50rem;
+            bottom:1.60rem;
+        }
+        .js{
+            right:1.92rem;
+            bottom:1.62rem;
+            
+        }
+        .inter{
+            right:1.21rem;
+            bottom:2.32rem;
+        }
+    }
+}

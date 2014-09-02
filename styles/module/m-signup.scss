@@ -1,0 +1,54 @@
+@charset "utf-8";
+.m-signup.play{
+    .way{
+        p:nth-of-type(1){
+            -webkit-animation:animate-drop .5s ease-in forwards;
+        }
+        p:nth-of-type(2){
+            -webkit-animation:animate-drop .5s .5s ease-in forwards;
+        }
+        p:nth-of-type(3){
+            -webkit-animation:animate-drop .5s 1s ease-in forwards;
+        }
+    }
+    .ing{
+        p:nth-of-type(1){
+            -webkit-animation:animate-drop .5s 1.5s ease-in forwards;
+        }
+        p:nth-of-type(2){
+            -webkit-animation:animate-drop .5s 2s ease-in forwards;
+        }
+        p:nth-of-type(3){
+            -webkit-animation:scale .5s 2.5s ease-in forwards;
+        }
+    }
+}
+.m-signup{
+    @extend %page;
+    background-color:#a46e51;
+    color:#fff;
+    font-size:.24rem;
+    &:before{
+        content:"\0020";
+        position:absolute;
+        top:0;
+        left:0;
+        background:url($img-src-house-p) 0 -1.74rem no-repeat;
+        background-size:3.38rem 2.29rem;
+        width:3.20rem;
+        height:.55rem;
+    }
+    p{
+        opacity:0;
+        margin-top:-.20rem;
+        line-height:1.5;
+    }
+    .way{
+        margin:1.10rem 0 .50rem;
+    }
+    .ing{
+        p:nth-of-type(3){
+            margin-top:0;
+        }
+    }
+}

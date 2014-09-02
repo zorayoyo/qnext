@@ -1,0 +1,47 @@
+@charset "utf-8";
+.m-prize.play{
+    .title{
+        -webkit-animation:intro-title 1s ease-in forwards;
+    }
+    .item{
+        -webkit-animation:animate-opacity 1s .8s ease-in-out forwards;
+    }
+}
+.m-prize{
+    @extend %page;
+    background-color:#68a858;
+    &:before,&:after{
+        content:"\0020";
+        position:absolute;
+        left:0;
+    }
+    &:before{
+        top:0;
+        background:url($img-src-house) no-repeat 0 -.87rem;
+        background-size:3.20rem 1.54rem;
+        width:3.20rem;
+        height:.67rem;
+    }
+    &:after{
+        bottom:0;
+        background:url($img-src-house-p) no-repeat;
+        background-size:3.38rem 2.29rem;
+        width:3.20rem;
+        height:1.74rem;
+    }
+    .title{
+        position:relative;
+        z-index:1;
+        padding:.36rem 0;
+        font:.30rem Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+        opacity:0;
+    }
+    .list{
+        padding:.20rem 0;
+    }
+    .item{
+        font-size:.24rem;
+        line-height:1.8;
+        opacity:0;
+    }
+}

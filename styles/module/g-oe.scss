@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import "../lib/mixins";
+article{position:relative;}
+.g-oe{
+    @extend %page;
+    background-color:#61ace0;
+    font-style:italic;
+    .decoration > div{
+        position:absolute;
+        background-image:url($img-src-cloud-opening);
+        background-repeat:no-repeat;
+        background-size:3.88rem 2.56rem;
+    }
+    .cloud-large{
+        background-position:-3.18rem -1.01rem;
+        left:-.60rem;
+        bottom:2rem;
+        width:0.7rem;
+        height:.30rem;
+        -webkit-animation:cloud-large 7s ease-in forwards;
+    }
+    .cloud-medium{
+        background-position:-3.42rem -.73rem;
+        left:1.30rem;
+        bottom:2.05rem;
+        width:.45rem;
+        height:.20rem;
+        -webkit-animation:cloud-small 5s .1s ease-in forwards;
+    }
+    .cloud-small{
+        background-position:-3.66rem -.55rem;
+        left:1rem;
+        bottom:2.30rem;
+        width:.22rem;
+        height:.10rem;
+        -webkit-animation:cloud-small 5s .1s ease-in forwards;
+    }
+    .cloud-layer-shadow-1{
+        background-position:0 0;
+        left:0;
+        bottom:.06rem;
+        width:2.80rem;
+        height:.65rem;
+        -webkit-animation:cloud-shadow-1 6s ease-in-out infinite alternate;
+    }
+    .cloud-layer-shadow-2{
+        background-position:0 -.66rem;
+        width:3.20rem;
+        height:.60rem;
+        left:.40rem;
+        bottom:0;
+        -webkit-animation:cloud-shadow-2 6s ease-in-out infinite alternate;
+    }
+    .cloud-layer{
+        background-position:0 -1.31rem;
+        width:3.88rem;
+        height:.75rem;
+        left:-.45rem;
+        bottom:0;
+        -webkit-animation:cloud-layer 6s ease-in-out infinite alternate;
+    }
+    .balloon{
+        position:absolute;
+        right:0;
+        bottom:.60rem;
+        background:url($img-src-balloon) no-repeat;
+        background-size:1.15rem 2.51rem;
+        width:1.15rem;
+        height:2.51rem;
+        -webkit-animation:balloon 6s linear infinite alternate;
+    }
+}

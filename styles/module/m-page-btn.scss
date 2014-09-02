@@ -1,0 +1,19 @@
+@charset "utf-8";
+.m-page-btn{
+    position:absolute;
+    bottom:.15rem;
+    left:50%;
+    width:.36rem;
+    height:.36rem;
+    margin-left:-.18rem;
+    -webkit-animation:page-btn 2s ease infinite;
+    &:before{
+        position:absolute;
+        content:"\0020";
+        width:.30rem;
+        height:.30rem;
+        border:.03rem solid;
+        border-color:transparent transparent rgba(0,0,0,.5) rgba(0,0,0,.5);
+        -webkit-transform:rotate(-45deg);
+    }
+}
