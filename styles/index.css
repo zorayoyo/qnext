@@ -244,10 +244,10 @@ article {
     border-color: transparent transparent rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5);
     -webkit-transform: rotate(-45deg); }
 
-.play .m-opening-hd .arrow {
-  -webkit-animation: arrow 2.5s ease-out forwards; }
 .play .m-opening-hd .title {
-  -webkit-animation: qnext 1s 2.5s ease-in forwards; }
+  -webkit-animation: qnext 1s 1.5s ease-in forwards; }
+.play .m-opening-hd .arrow {
+  -webkit-animation: arrow 1s 2.5s ease-out forwards; }
 .play .m-opening-hd .sub-title {
   -webkit-animation: qnext .5s 3s ease-in forwards; }
 
@@ -268,7 +268,8 @@ article {
     height: 100%;
     background-position: right 0;
     left: -.28rem;
-    top: 0; }
+    top: 0;
+    opacity: 0; }
   .m-opening-hd .title {
     margin: auto;
     width: 1.95rem;

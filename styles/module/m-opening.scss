@@ -1,11 +1,11 @@
 @charset "utf-8";
 .play{
     .m-opening-hd{
-        .arrow{
-            -webkit-animation:arrow 2.5s ease-out forwards;
-        }
         .title{
-            -webkit-animation:qnext 1s 2.5s ease-in forwards;
+            -webkit-animation:qnext 1s 1.5s ease-in forwards;
+        }
+        .arrow{
+            -webkit-animation:arrow 1s 2.5s ease-out forwards;
         }
         .sub-title{
             -webkit-animation:qnext .5s 3s ease-in forwards;
@@ -31,6 +31,7 @@
         background-position:right 0;
         left:-.28rem;
         top:0;
+        opacity:0;
     }
     .title{
         margin:auto;

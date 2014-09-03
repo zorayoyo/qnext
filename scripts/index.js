@@ -1,6 +1,7 @@
 $(function(){
     document.ontouchmove = function(e){ e.preventDefault();}
-    var pageHeight = $(".js-page").eq(0).height();
+    // var pageHeight = $(".js-page").eq(0).height();
+    // var pageHeight = $(window).height();
     var pageNum = 1;
     var pageCount = $('section').size();
     var $btnNext = $("#btn-next");
@@ -14,7 +15,7 @@ $(function(){
         }else{
             $btnNext.show();
         }
-        var scrollHeight = -(pageNum * pageHeight - pageHeight);
+        var scrollHeight = -((pageNum - 1) * $(window).height());
          $("article").css({
                 "-webkit-transform": "translateY("+ scrollHeight +"px)",
                 "-webkit-transition":"all .5s ease"
@@ -41,4 +42,5 @@ $(function(){
         scrollToPre();
     });
     scrollTo(1);
+
 });
