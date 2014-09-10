@@ -2,18 +2,19 @@
 .play{
     .m-opening-hd{
         .title{
-            -webkit-animation:qnext 1s 1.5s ease-in forwards;
+            -webkit-animation:qnext 1s ease-in forwards;
         }
         .arrow{
-            -webkit-animation:arrow 1s 2.5s ease-out forwards;
+            -webkit-animation:arrow 1s 1s ease-out forwards;
         }
         .sub-title{
             -webkit-animation:qnext .5s 3s ease-in forwards;
         }
     }
 }
+//默认第一次不需要上移
 .m-opening{
-    display:block;
+    -webkit-transform: translate3d(0,0,0);
 }
 .m-opening-hd{
     display:inline-block;
@@ -25,9 +26,8 @@
     }
     .arrow{
         position:absolute;
-        content:"\0020";
         width:.28rem;
-        height:100%;
+        height:.48rem;
         background-position:right 0;
         left:-.28rem;
         top:0;

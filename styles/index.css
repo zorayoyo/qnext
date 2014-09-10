@@ -1,4 +1,5 @@
 html {
+  font-size: 100px;
   font-size: 31.25vw; }
 
 body {
@@ -11,6 +12,14 @@ html, body {
 html, body, article {
   height: 100%; }
 
+article {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden; }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
@@ -20,37 +29,37 @@ ul {
   padding: 0; }
 
 @-webkit-keyframes cloud-large {
-  0 {
+  0% {
     transform: translate(0); }
 
   100% {
     transform: translate(1.2rem, 0.05rem); } }
 @-webkit-keyframes cloud-small {
-  0 {
+  0% {
     transform: translate(0); }
 
   100% {
     transform: translate(0.6rem, 0.05rem); } }
 @-webkit-keyframes cloud-shadow-1 {
-  0 {
+  0% {
     -webkit-transform: translate(-0.25rem, 0); }
 
   100% {
     -webkit-transform: translate(0, 0); } }
 @-webkit-keyframes cloud-shadow-2 {
-  0 {
+  0% {
     -webkit-transform: translate(0.1rem, 0); }
 
   100% {
     -webkit-transform: translate(0.1rem, 0); } }
 @-webkit-keyframes cloud-layer {
-  0 {
+  0% {
     -webkit-transform: translate(0, 0); }
 
   100% {
     -webkit-transform: translate(0.2rem, 0); } }
 @-webkit-keyframes qnext {
-  0 {
+  0% {
     opacity: 0; }
 
   50% {
@@ -59,7 +68,7 @@ ul {
   100% {
     opacity: 1; } }
 @-webkit-keyframes arrow {
-  0 {
+  0% {
     -webkit-transform: translate(0);
     opacity: 0; }
 
@@ -71,13 +80,13 @@ ul {
     -webkit-transform: translate(1.45rem);
     opacity: 1; } }
 @-webkit-keyframes balloon {
-  0 {
+  0% {
     -webkit-transform: translate(0) rotate(0); }
 
   100% {
     -webkit-transform: translate(0.1rem) rotate(5deg); } }
 @-webkit-keyframes intro-title {
-  0 {
+  0% {
     -webkit-transform: translateY(0);
     opacity: 0; }
 
@@ -85,13 +94,13 @@ ul {
     -webkit-transform: translateY(0.39rem);
     opacity: 1; } }
 @-webkit-keyframes animate-opacity {
-  0 {
+  0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
 @-webkit-keyframes mountain {
-  0 {
+  0% {
     -webkit-transform: translateY(0);
     opacity: 0; }
 
@@ -99,13 +108,13 @@ ul {
     -webkit-transform: translateY(-2.39rem);
     opacity: 1; } }
 @-webkit-keyframes topic {
-  0 {
+  0% {
     -webkit-transform: scale(0); }
 
   100% {
     -webkit-transform: scale(1); } }
 @-webkit-keyframes scale {
-  0 {
+  0% {
     opacity: 0;
     -webkit-transform: scale(0.1); }
 
@@ -125,7 +134,7 @@ ul {
     opacity: 1;
     -webkit-transform: scale(1); } }
 @-webkit-keyframes animate-drop {
-  0 {
+  0% {
     opacity: 0;
     -webkit-transform: translateY(0); }
 
@@ -162,10 +171,10 @@ ul {
   z-index: 0;
   color: #fff;
   text-align: center;
-  display: none; }
-
-article {
-  position: relative; }
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  -webkit-transform: translate3d(0px, 100%, 0px);
+  transform: translate3d(0px, 100%, 0px); }
 
 .g-oe {
   background-color: #61ace0;
@@ -214,7 +223,7 @@ article {
     background-position: 0 -1.31rem;
     width: 3.88rem;
     height: .75rem;
-    left: -.45rem;
+    left: -.25rem;
     bottom: 0;
     -webkit-animation: cloud-layer 6s ease-in-out infinite alternate; }
   .g-oe .balloon {
@@ -245,14 +254,14 @@ article {
     -webkit-transform: rotate(-45deg); }
 
 .play .m-opening-hd .title {
-  -webkit-animation: qnext 1s 1.5s ease-in forwards; }
+  -webkit-animation: qnext 1s ease-in forwards; }
 .play .m-opening-hd .arrow {
-  -webkit-animation: arrow 1s 2.5s ease-out forwards; }
+  -webkit-animation: arrow 1s 1s ease-out forwards; }
 .play .m-opening-hd .sub-title {
   -webkit-animation: qnext .5s 3s ease-in forwards; }
 
 .m-opening {
-  display: block; }
+  -webkit-transform: translate3d(0, 0, 0); }
 
 .m-opening-hd {
   display: inline-block;
@@ -263,9 +272,8 @@ article {
     background-size: 2.23rem .48rem; }
   .m-opening-hd .arrow {
     position: absolute;
-    content: "\0020";
     width: .28rem;
-    height: 100%;
+    height: .48rem;
     background-position: right 0;
     left: -.28rem;
     top: 0;
@@ -290,7 +298,7 @@ article {
 
 .m-intro.play:before {
   -webkit-animation: cloud-layer 8s ease-in-out infinite alternate; }
-.m-intro.play:after {
+.m-intro.play .mountain {
   -webkit-animation: mountain .7s ease-in-out forwards; }
 .m-intro.play .title {
   -webkit-animation: intro-title 1s 1.8s ease-in forwards; }
@@ -308,17 +316,17 @@ article {
 .m-intro {
   background-color: #f7ebaa;
   color: #806c03; }
-  .m-intro:before, .m-intro:after {
-    content: "\0020";
-    position: absolute;
-    width: 100%; }
   .m-intro:before {
+    position: absolute;
+    content: "\0020";
     top: 0;
     left: 0;
     background: url("../images/cloud-opening.png") -0.4rem -2.1rem no-repeat;
     background-size: 3.88rem 2.57rem;
+    width: 100%;
     height: .52rem; }
-  .m-intro:after {
+  .m-intro .mountain {
+    position: absolute;
     bottom: -2.39rem;
     right: 0;
     background: url("../images/mountain.png") no-repeat;
@@ -368,41 +376,41 @@ article {
 
 .m-process.play .tree {
   -webkit-animation: tree 1.5s ease-in-out forwards; }
-.m-process.play .item:nth-child(1):before {
+.m-process.play .item:nth-child(1) .circle {
   -webkit-animation: scale .2s 1.5s ease-in-out forwards; }
 .m-process.play .item:nth-child(1) time {
   -webkit-animation: animate-opacity .2s 1.7s ease-in-out forwards; }
-.m-process.play .item:nth-child(1) span {
+.m-process.play .item:nth-child(1) span.text {
   -webkit-animation: animate-opacity .2s 1.9s ease-in-out forwards; }
-.m-process.play .item:nth-child(2):before {
+.m-process.play .item:nth-child(2) .circle {
   -webkit-animation: scale .2s 2.1s ease-in-out forwards; }
 .m-process.play .item:nth-child(2) time {
   -webkit-animation: animate-opacity .2s 2.3s ease-in-out forwards; }
-.m-process.play .item:nth-child(2) span {
+.m-process.play .item:nth-child(2) span.text {
   -webkit-animation: animate-opacity .2s 2.5s ease-in-out forwards; }
-.m-process.play .item:nth-child(3):before {
+.m-process.play .item:nth-child(3) .circle {
   -webkit-animation: scale .2s 2.7s ease-in-out forwards; }
 .m-process.play .item:nth-child(3) time {
   -webkit-animation: animate-opacity .2s 2.9s ease-in-out forwards; }
-.m-process.play .item:nth-child(3) span {
+.m-process.play .item:nth-child(3) span.text {
   -webkit-animation: animate-opacity .2s 3.1s ease-in-out forwards; }
-.m-process.play .item:nth-child(4):before {
+.m-process.play .item:nth-child(4) .circle {
   -webkit-animation: scale .2s 3.3s ease-in-out forwards; }
 .m-process.play .item:nth-child(4) time {
   -webkit-animation: animate-opacity .2s 3.5s ease-in-out forwards; }
-.m-process.play .item:nth-child(4) span {
+.m-process.play .item:nth-child(4) span.text {
   -webkit-animation: animate-opacity .2s 3.7s ease-in-out forwards; }
-.m-process.play .item:nth-child(5):before {
+.m-process.play .item:nth-child(5) .circle {
   -webkit-animation: scale .2s 3.9s ease-in-out forwards; }
 .m-process.play .item:nth-child(5) time {
   -webkit-animation: animate-opacity .2s 4.1s ease-in-out forwards; }
-.m-process.play .item:nth-child(5) span {
+.m-process.play .item:nth-child(5) span.text {
   -webkit-animation: animate-opacity .2s 4.3s ease-in-out forwards; }
-.m-process.play .item:nth-child(6):before {
+.m-process.play .item:nth-child(6) .circle {
   -webkit-animation: scale .2s 4.5s ease-in-out forwards; }
 .m-process.play .item:nth-child(6) time {
   -webkit-animation: animate-opacity .2s 4.7s ease-in-out forwards; }
-.m-process.play .item:nth-child(6) span {
+.m-process.play .item:nth-child(6) span.text {
   -webkit-animation: animate-opacity .2s 4.9s ease-in-out forwards; }
 
 .m-process {
@@ -440,8 +448,7 @@ article {
     margin-bottom: .40rem;
     font-size: .16rem;
     text-align: left; }
-    .m-process .item:before {
-      content: "\0020";
+    .m-process .item .circle {
       position: absolute;
       left: 33%;
       margin-left: -.06rem;
@@ -451,7 +458,7 @@ article {
       border-radius: 50%;
       background: #a186c4;
       opacity: 0; }
-    .m-process .item time, .m-process .item span {
+    .m-process .item time, .m-process .item .text {
       display: inline-block;
       opacity: 0; }
     .m-process .item time {
@@ -459,7 +466,7 @@ article {
       width: 33%;
       padding-right: 1em;
       text-align: right; }
-    .m-process .item span {
+    .m-process .item .text {
       padding-left: 1em; }
 
 .m-prize.play .title {
@@ -536,7 +543,7 @@ article {
     margin-top: 0; }
 
 .m-ending.play {
-  -webkit-transform: translateZ(0); }
+  -webkit-animation: translateZ(0); }
   .m-ending.play .m-ending-hd {
     -webkit-animation: scale 1s ease forwards; }
 

@@ -4,68 +4,68 @@
         -webkit-animation:tree 1.5s ease-in-out forwards;
     }
     .item:nth-child(1){
-        &:before{
+        .circle{
             -webkit-animation:scale .2s 1.5s ease-in-out forwards;
         }
         time{
             -webkit-animation:animate-opacity .2s 1.7s ease-in-out forwards;
         }
-        span{
+        span.text{
             -webkit-animation:animate-opacity .2s 1.9s ease-in-out forwards;
         }
     }
     .item:nth-child(2){
-        &:before{
+        .circle{
             -webkit-animation:scale .2s 2.1s ease-in-out forwards;
         }
         time{
             -webkit-animation:animate-opacity .2s 2.3s ease-in-out forwards;
         }
-        span{
+        span.text{
             -webkit-animation:animate-opacity .2s 2.5s ease-in-out forwards;
         }
     }
     .item:nth-child(3){
-        &:before{
+        .circle{
             -webkit-animation:scale .2s 2.7s ease-in-out forwards;
         }
         time{
             -webkit-animation:animate-opacity .2s 2.9s ease-in-out forwards;
         }
-        span{
+        span.text{
             -webkit-animation:animate-opacity .2s 3.1s ease-in-out forwards;
         }
     }
     .item:nth-child(4){
-        &:before{
+        .circle{
             -webkit-animation:scale .2s 3.3s ease-in-out forwards;
         }
         time{
             -webkit-animation:animate-opacity .2s 3.5s ease-in-out forwards;
         }
-        span{
+        span.text{
             -webkit-animation:animate-opacity .2s 3.7s ease-in-out forwards;
         }
     }
     .item:nth-child(5){
-        &:before{
+        .circle{
             -webkit-animation:scale .2s 3.9s ease-in-out forwards;
         }
         time{
             -webkit-animation:animate-opacity .2s 4.1s ease-in-out forwards;
         }
-        span{
+        span.text{
             -webkit-animation:animate-opacity .2s 4.3s ease-in-out forwards;
         }
     }
     .item:nth-child(6){
-        &:before{
+        .circle{
             -webkit-animation:scale .2s 4.5s ease-in-out forwards;
         }
         time{
             -webkit-animation:animate-opacity .2s 4.7s ease-in-out forwards;
         }
-        span{
+        span.text{
             -webkit-animation:animate-opacity .2s 4.9s ease-in-out forwards;
         }
     }
@@ -113,8 +113,7 @@
         margin-bottom:.40rem;
         font-size:.16rem;
         text-align:left;
-        &:before{
-            content:"\0020";
+        .circle{
             position:absolute;
             left:33%;
             margin-left:-.06rem;
@@ -125,7 +124,7 @@
             background:#a186c4;
             opacity:0;
         }
-        time,span{
+        time,.text{
             display:inline-block;
             opacity:0;
         }
@@ -135,7 +134,7 @@
             padding-right:1em;
             text-align:right;
         }
-        span{
+        .text{
             padding-left:1em;
         }
     }

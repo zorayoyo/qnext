@@ -3,7 +3,7 @@
     &:before{
         -webkit-animation:cloud-layer 8s ease-in-out infinite alternate;
     }
-    &:after{
+    .mountain{
         -webkit-animation:mountain .7s ease-in-out forwards; 
     }
     .title{
@@ -31,20 +31,19 @@
     @extend %page;
     background-color:#f7ebaa;
     color:#806c03;
-    &:before,&:after{
-        content:"\0020";
-        position:absolute;
-        width:100%;
-    }
     &:before{
+        position:absolute;
+        content:"\0020";
         top:0;
         left:0;
         background:url($img-src-cloud-opening) -.40rem -2.10rem no-repeat;
         background-size:3.88rem 2.57rem;
+        width:100%;
         height:.52rem;
     }
     // decoration-mountain
-    &:after{
+    .mountain{
+        position:absolute;
         bottom:-2.39rem;
         right:0;
         background:url($img-src-mountain) no-repeat;

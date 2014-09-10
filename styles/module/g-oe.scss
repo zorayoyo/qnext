@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import "../lib/mixins";
-article{position:relative;}
 .g-oe{
     @extend %page;
     background-color:#61ace0;
@@ -55,7 +54,7 @@ article{position:relative;}
         background-position:0 -1.31rem;
         width:3.88rem;
         height:.75rem;
-        left:-.45rem;
+        left:-.25rem;
         bottom:0;
         -webkit-animation:cloud-layer 6s ease-in-out infinite alternate;
     }

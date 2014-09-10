@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Qnext 5 - 去哪儿前端交互沙龙第五期</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" name="viewport">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <article>
+    <img src="images/qnext.png" alt="">
+    <div id="progress" style="display:none"></div>
+    <article class="js-pages-container">
         <section class="g-oe m-opening js-page">
             <header class="m-opening-hd">
                 <h1 class="title"><span>QNEXT</span></h1>
@@ -35,17 +37,19 @@
                 <div class="js">Javascript</div>
                 <div class="inter">Interaction</div>
             </div>
-            <!-- <div class="decroation"></div> -->
+            <div class="decroation">
+                <div class="mountain"></div>
+            </div>
         </section>
         <section class="m-process js-page">
             <div class="tree"></div>
             <ul class="list">
-                <li class="item"><time>9月1日</time><span>主题募集</span></li>
-                <li class="item"><time>9月6日</time><span>主题募集结束</span></li>
-                <li class="item"><time>9月9日</time><span>试讲</span></li>
-                <li class="item"><time>9月13日</time><span>活动开始</span></li>
-                <li class="item"><time>9月13日</time><span>活动结束</span></li>
-                <li class="item"><time>12月中旬</time><span>Qnext 6</span></li>
+                <li class="item"><span class="circle"></span><time>9月1日</time><span class="text">主题募集</span></li>
+                <li class="item"><span class="circle"></span><time>9月6日</time><span class="text">主题募集结束</span></li>
+                <li class="item"><span class="circle"></span><time>9月9日</time><span class="text">试讲</span></li>
+                <li class="item"><span class="circle"></span><time>9月13日</time><span class="text">活动开始</span></li>
+                <li class="item"><span class="circle"></span><time>9月13日</time><span class="text">活动结束</span></li>
+                <li class="item"><span class="circle"></span><time>12月中旬</time><span class="text">Qnext 6</span></li>
             </ul>
         </section>
         <section class="m-prize js-page">
@@ -85,14 +89,7 @@
         </section>
     </article>
     <div class="m-page-btn"  id="btn-next"></div>
-    <script>
-     window.onload = function() {
-        window.setInterval(function(){ window.scrollTo(0, 1);}, 0);
-    };
-    </script>
-    <script src="scripts/zepto.js"></script>
-    <script src="scripts/touch.js"></script>
-    <script src="scripts/event.js"></script>
+    <script src="scripts/page.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>
