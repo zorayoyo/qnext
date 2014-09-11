@@ -48,6 +48,7 @@
         right:0;
         background:url($img-src-mountain) no-repeat;
         background-size:3.04rem 2.94rem;
+        // background-size:contain;
         width:2.60rem;
         height:2.39rem;
     }
@@ -62,6 +63,12 @@
         line-height:1.8;
         opacity:0;
     }
+    // 针对小屏幕使用较小的字号
+    // @media screen and (max-device-height:480px){
+    //     .para{
+    //         font-size:1.2rem;
+    //     }
+    // }
     .topic{
         div{
             position:absolute;
